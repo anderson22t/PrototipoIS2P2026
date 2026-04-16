@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{70AC121D-3F4C-4CD4-B8F9-B244863C8999}</ProjectGuid>
+    <ProjectGuid>{77774D66-E532-467C-9C83-53F028D9A8B4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Capa_Vista_Hoteleria</RootNamespace>
-    <AssemblyName>Capa_Vista_Hoteleria</AssemblyName>
+    <RootNamespace>Capa_Vista</RootNamespace>
+    <AssemblyName>Capa_Vista</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,19 +31,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Capa_Controlador_Seguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\componentes\seguridad\SeguridadMVC\SeguridadMVC\CapaControlador\bin\Debug\Capa_Controlador_Seguridad.dll</HintPath>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Capa_Controlador_Navegador">
+      <HintPath>..\..\..\..\..\componentes\navegador\NavegadorMVC\CapaVistaNavegador\bin\Debug\Capa_Controlador_Navegador.dll</HintPath>
     </Reference>
-    <Reference Include="Capa_Vista">
-      <HintPath>..\..\..\Parcial\Capa_Vista\bin\Debug\Capa_Vista.dll</HintPath>
+    <Reference Include="Capa_Vista_Navegador">
+      <HintPath>..\..\..\..\..\componentes\navegador\NavegadorMVC\CapaVistaNavegador\bin\Debug\Capa_Vista_Navegador.dll</HintPath>
     </Reference>
-    <Reference Include="Capa_Vista_Seguridad">
-      <HintPath>..\..\..\..\..\..\componentes\seguridad\SeguridadMVC\SeguridadMVC\CapaVista\bin\Debug\Capa_Vista_Seguridad.dll</HintPath>
-    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,48 +56,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Frm_Login_Hoteleria.cs">
+    <Compile Include="Parcial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Login_Hoteleria.Designer.cs">
-      <DependentUpon>Frm_Login_Hoteleria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_MDI_Hoteleria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_MDI_Hoteleria.Designer.cs">
-      <DependentUpon>Frm_MDI_Hoteleria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Splash.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Splash.Designer.cs">
-      <DependentUpon>Frm_Splash.cs</DependentUpon>
+    <Compile Include="Parcial.Designer.cs">
+      <DependentUpon>Parcial.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
+    <Compile Include="Reporte Jugador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte Jugador.Designer.cs">
+      <DependentUpon>Reporte Jugador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tipo Jugador.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
+      <DependentUpon>Tipo Jugador.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Frm_Login_Hoteleria.resx">
-      <DependentUpon>Frm_Login_Hoteleria.cs</DependentUpon>
+    <EmbeddedResource Include="Parcial.resx">
+      <DependentUpon>Parcial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_MDI_Hoteleria.resx">
-      <DependentUpon>Frm_MDI_Hoteleria.cs</DependentUpon>
+    <EmbeddedResource Include="Reporte Jugador.resx">
+      <DependentUpon>Reporte Jugador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Splash.resx">
-      <DependentUpon>Frm_Splash.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    <EmbeddedResource Include="Tipo Jugador.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Tipo Jugador.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Splash.png" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

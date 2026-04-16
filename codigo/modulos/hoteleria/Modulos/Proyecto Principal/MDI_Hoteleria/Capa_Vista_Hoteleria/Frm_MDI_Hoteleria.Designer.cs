@@ -39,6 +39,7 @@ namespace Capa_Vista_Hoteleria
             this.tipoHabitacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviciosCuartosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.huespedesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.promocionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.polizaContableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,7 +64,7 @@ namespace Capa_Vista_Hoteleria
             this.asignacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.promocionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parcialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Pnl_Superior.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -134,7 +135,8 @@ namespace Capa_Vista_Hoteleria
             this.tipoHabitacionesToolStripMenuItem,
             this.serviciosCuartosToolStripMenuItem,
             this.huespedesToolStripMenuItem,
-            this.promocionesToolStripMenuItem});
+            this.promocionesToolStripMenuItem,
+            this.parcialToolStripMenuItem});
             this.catálogosToolStripMenuItem.Font = new System.Drawing.Font("Rockwell", 10F);
             this.catálogosToolStripMenuItem.Name = "catálogosToolStripMenuItem";
             this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
@@ -167,6 +169,13 @@ namespace Capa_Vista_Hoteleria
             this.huespedesToolStripMenuItem.Size = new System.Drawing.Size(317, 26);
             this.huespedesToolStripMenuItem.Text = "Huespedes ";
             this.huespedesToolStripMenuItem.Click += new System.EventHandler(this.huespedesToolStripMenuItem_Click);
+            // 
+            // promocionesToolStripMenuItem
+            // 
+            this.promocionesToolStripMenuItem.Name = "promocionesToolStripMenuItem";
+            this.promocionesToolStripMenuItem.Size = new System.Drawing.Size(317, 26);
+            this.promocionesToolStripMenuItem.Text = "Promociones";
+            this.promocionesToolStripMenuItem.Click += new System.EventHandler(this.promocionesToolStripMenuItem_Click);
             // 
             // procesosToolStripMenuItem
             // 
@@ -361,12 +370,12 @@ namespace Capa_Vista_Hoteleria
             this.toolStripStatusLabel.Size = new System.Drawing.Size(54, 20);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // promocionesToolStripMenuItem
+            // parcialToolStripMenuItem
             // 
-            this.promocionesToolStripMenuItem.Name = "promocionesToolStripMenuItem";
-            this.promocionesToolStripMenuItem.Size = new System.Drawing.Size(317, 26);
-            this.promocionesToolStripMenuItem.Text = "Promociones";
-            this.promocionesToolStripMenuItem.Click += new System.EventHandler(this.promocionesToolStripMenuItem_Click);
+            this.parcialToolStripMenuItem.Name = "parcialToolStripMenuItem";
+            this.parcialToolStripMenuItem.Size = new System.Drawing.Size(317, 26);
+            this.parcialToolStripMenuItem.Text = "Parcial";
+            this.parcialToolStripMenuItem.Click += new System.EventHandler(this.parcialToolStripMenuItem_Click);
             // 
             // Frm_MDI_Hoteleria
             // 
@@ -429,5 +438,6 @@ namespace Capa_Vista_Hoteleria
         private System.Windows.Forms.ToolStripMenuItem ordenesDeCompraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cierreDiarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem promocionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parcialToolStripMenuItem;
     }
 }
